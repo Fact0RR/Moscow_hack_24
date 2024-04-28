@@ -40,14 +40,10 @@ git clone https://github.com/BuldakovN/RRR-Video-Action-Classification.git
 
 3. Запуск контейнеров и сервера стриминга:
 ```Bash
-cd RRR-Video-Action-Classification
+
 docker-compose build
 docker-compose up
 
-cd modelStream
-
-pip3 install -r requirements.txt
-python3 serverStream.py
 ```
 
 ## <a name="4">Уникальность нашего решения </a>
