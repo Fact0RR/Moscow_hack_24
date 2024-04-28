@@ -1,39 +1,59 @@
 <!DOCTYPE html>
-    <head>
-        <title>Geek Brains</title>
-        <meta charset="utf-8">
-        <link rel = "stylesheet" href="style.css">
-        <script src="script.js"></script>
-    </head>
-    <body >
-
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12 text-center" >
-                <div><h1>Система реализации программной архитектуры передачи данных с интеллектуальными модулями</h1></div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герои ML и Тильта</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+<body>
+    <div class="header">
+        <div class="frame">
+            <div class="title">
+                <h1 class="bigtext">Подбери подходящий <span class="colortext">курс</span> для работы мечты</h1>
+                <h3 class="smtext">Из множества курсов от GeekBrains наш сервис подберет подборку лучших именно для твоей вакансии</h3>
+            </div>
+            <div class="search">
+                <form id="form1">
+                    <input id="textForm" type="text" class="searchTerm" name="input" placeholder="Какую вакансию вы рассматриваете?">
+                    <button  type="submit" class="searchButton" onclick = "sendDataToServer()">Поиск</i></button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <div class="content">
+        <div class="cards">
+            <div class="count">
+                <span id = "num" class="number">0</span> Курсов
+            </div>
+            <div id = "cs" class="courses">
+                
+            </div>
+        </div>
+        <div class="feedback">
+            <div class="wrapper">
+                <h3>Оцените подборку</h3>
+                <form action="#">
+                    <div class="rating" id = "rating">
+                        <input type="number" name="rating" hidden>
+                        <i class='bx bx-star star' style="--i: 0;"></i>
+                        <i class='bx bx-star star' style="--i: 1;"></i>
+                        <i class='bx bx-star star' style="--i: 2;"></i>
+                        <i class='bx bx-star star' style="--i: 3;"></i>
+                        <i class='bx bx-star star' style="--i: 4;"></i>
+                    </div>
+                    <textarea name="opinion" id="rewiewText" cols="30" rows="5" placeholder="Ваше мнение..."></textarea>
+                    <div class="btn-group">
+                        <button type="submit" class="btn send" onclick="sendRewiew()">Отправить</button>
+                        <button  class="btn cansel">Отмена</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
-    <div class="col-md-12 text-center">
-
-        <br>
-        <img id="content" class="img" src="https://million-wallpapers.ru/wallpapers/3/38/478269251722427/oboi-dlya-telefona-v-rezhime-ozhidaniya.jpg">
-        <br>
-        <br>
-        <table class="table" id = "dynamicTable">
-            <thead>
-              <tr>
-                <th>Динамическая таблица</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                
-                <td>Здесь автоматически появятся данные при правильном подключении</td>
-                
-              </tr>
-            </tbody>
-          </table>
-    </div>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>

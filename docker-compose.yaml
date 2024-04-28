@@ -17,10 +17,18 @@ services:
     ports:
       - "5432:5432"
 
+  model:
+   container_name: py_model
+   build: './model'
+   ports:
+     - "5000:5000"
+   depends_on:
+     - db
+   restart: always
   
   main:
    container_name: go_server
-   build: './API'
+   build: './back'
    ports:
      - "8080:8080"
    depends_on:
